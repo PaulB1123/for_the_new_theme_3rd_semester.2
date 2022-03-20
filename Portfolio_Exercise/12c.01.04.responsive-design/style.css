@@ -1,0 +1,721 @@
+ img {
+   margin-top: 2rem;
+   width: 35rem;
+ }
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+ @font-face {
+   font-family: AktivGrotesk;
+   src: url(fonts/AktivGrotesk-Regular.ttf);
+ }
+
+ @font-face {
+   font-family: GT-Super-Display;
+   src: url(fonts/GT-Super-Display-Super-Trial.otf);
+ }
+
+ @font-face {
+   font-family: GT-Super-Display_Regular;
+   src: url(fonts/GT-Super-Display-Super-Trial.otf);
+ }
+
+ :root {
+   --color-darker: rgb(48, 48, 48);
+   --color-dark: rgb(64, 64, 64);
+   --color-light: rgb(194, 194, 194);
+   --color-lighter: rgb(255, 255, 255);
+   /* you could add an accent color for CTAs and anchor tags ;-) */
+ }
+
+ :root {
+   --primary-font: clamp(2.13rem, calc(1.76rem + 1.81vw), 3.05rem);
+   --secondary-font: clamp(0.75rem, calc(0.60rem + 0.73vw), 1.13rem);
+   --third-font: clamp(1.88rem, calc(1.65rem + 1.10vw), 2.44rem);
+   --fourth-font: clamp(1.50rem, calc(1.43rem + 0.37vw), 1.69rem);
+ }
+
+ html[data-theme='dark'] {
+  --color-primary1: rgb(48, 48, 48);
+  --color-primary2: black;
+  --color-secondary1: rgb(194, 194, 194);
+  --color-secondary2: rgb(194, 194, 194);
+  --color-white: black;
+  --color-black: white;
+}
+
+
+ html {
+   --color-primary1: rgb(48, 48, 48);
+   --color-primary2: black;
+   --color-secondary1: rgb(194, 194, 194);
+   --color-secondary2: rgb(194, 194, 194);
+   --color-white: white;
+   --color-black: black;
+ }
+
+
+#header_text_main span {
+  color: var(--color-white);
+  font-family: GT-Super-Display_Regular;
+  font-size: clamp(1.00rem, calc(-0.19rem + 5.95vw), 4.05rem);
+ }
+
+ /* Fonts */
+ h1,
+ h2,
+ h3 {
+   color: var(--color-darker);
+ }
+
+ h1 {
+   font-family: GT-Super-Display;
+ }
+
+ h2 {
+   font-family: GT-Super-Display;
+ }
+
+ h3 {
+   font-family: GT-Super-Display;
+   font-size: var(--fourth-font);
+ }
+
+ p {
+   color: var(--color-dark);
+   font-family: AktivGrotesk;
+   font-family: 'Montserrat', sans-serif;
+ }
+
+ html {
+   background-color: var(--color-black);
+ }
+
+ /* UI Elements */
+ .hidden {
+  display: none;
+}
+
+
+ button {
+   display: inline-block;
+   height: 3rem;
+   padding: 0rem 2rem;
+   border: none;
+   font-size: 1rem;
+   text-align: center;
+   text-decoration: none;
+   background-color: var(--color-secondary1);
+   color: var(--color-lighter);
+ }
+
+ button:hover {
+   background-color: var(--color-white);
+   color: white;
+ }
+
+ .light_button {
+   background-color: var(--color-white);
+   color: var(--color-white);
+   font-size: 0.8rem;
+ }
+
+ input[type=text] {
+   box-sizing: border-box;
+   width: 250px;
+   height: 3rem;
+   padding: 1rem 1rem;
+   font-size: 1rem;
+   text-align: left;
+   background-color: var(--color-white);
+   border-color: var(--color-white);
+   color: var(--color-white);
+ }
+
+
+
+ input[type=checkbox] {
+   /* styling for input element */
+   height: 0;
+   width: 0;
+   visibility: hidden;
+ }
+
+ label {
+   /* styling for labels */
+   cursor: pointer;
+   text-indent: -9999px;
+   width: 52px;
+   height: 27px;
+   background: var(--color-white);
+   float: right;
+   border-radius: 100px;
+   position: relative;
+ }
+
+ /* Check box */
+
+ label:after {
+   /* styling for labels - on toggle */
+   content: '';
+   position: absolute;
+   top: 3px;
+   left: 3px;
+   width: 20px;
+   height: 20px;
+   background: var(--color-black);
+   border-radius: 90px;
+   -webkit-transition: 0.3s;
+   transition: 0.3s;
+ }
+
+ input:checked+label {
+   /* conditional check while toggling */
+   background: var(--color-white);
+ }
+
+ input:checked+label:after {
+   left: calc(100% - 5px);
+   -webkit-transform: translateX(-100%);
+   transform: translateX(-100%);
+ }
+
+ label:active:after {
+   width: 45px;
+ }
+
+
+ /* Menu */
+
+ 
+ #logo_black {
+  position: absolute;
+  top: 2rem;
+  left:19rem;
+ }
+
+ nav {
+   display: flex;
+   padding: 1rem;
+   justify-content: space-around;
+   align-items: center;
+   /* background-color: var(--color-secondary2); */
+ }
+
+ .logo {
+   width: 150px;
+ }
+
+ nav a {
+   color: var(--color-primary1);
+   text-decoration: none;
+ }
+
+ nav a.logo {
+   /* font-family: "Noto Serif Display", serif; */
+   font-size: 1.25rem;
+ }
+
+ nav li {
+   display: inline-block;
+   margin: 0px 1rem;
+ }
+
+ /* Header Main */
+ .header_text_main {
+   width: 100%;
+   min-height: 95vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   /* flex-flow: wrap; */
+   font-size: clamp(1.00rem, calc(0.30rem + 3.51vw), 2.80rem);
+   padding: 0rem;
+   margin: 0rem;
+ }
+
+ .header_text_main h1 {
+   padding: 0rem;
+   margin: 0rem;
+   color: var(--color-white);
+   font-family: GT-Super-Display_Regular;
+ }
+
+ /* Header */
+ header {
+   display: flex;
+   flex-direction: column;
+   min-height: 130vh;
+   padding: 5rem;
+   align-items:center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   background-color: var(--color-black);
+   object-fit: cover;
+ }
+
+
+
+ header h1 {
+  color: var(--color-white);
+   font-size: var(--third-font);
+
+ }
+
+ header p {
+  color: var(--color-white);
+   font-size: var(--secondary-font);
+   line-height: 1.5rem;
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+
+ }
+
+ header button {
+   margin-bottom: 5rem;
+ }
+
+ .header_text {
+   min-width: 300px;
+   width: 30vw;
+ }
+
+ #second_image {
+   width: 25rem;
+   min-width: 100px;
+ }
+
+ /* advantages section */
+ #advantages {
+   margin-top: 10rem;
+   padding: 7rem;
+   margin-bottom: 10rem;
+ }
+
+
+ #advantages h2 {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-bottom: 5rem;
+   font-size: var(--third-font);
+   line-height: 2.5rem;
+   color: var(--color-white)
+ }
+
+ article {
+   /* display: flex; 
+   min-height: 50vh; 
+   padding: 2rem;  */
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+   border-radius: 15px;
+ }
+
+
+ .advantages_card_text {
+   padding: 1rem;
+ }
+
+ .advantages_card_text h3 {
+   font-size: var(--fourth-font);
+   color: var(--color-white)
+ }
+
+ .advantages_card_text p {
+   color: var(--color-white);
+ }
+
+ .advantages_card img {
+   width: 100%;
+   height: 50%;
+   object-fit: cover;
+   min-width: 150px;
+   min-height: 150px;
+   /* margin: 1rem; */
+   background-color: var(--color-primary2);
+   border-top-right-radius: 15px;
+   border-top-left-radius: 15px;
+   margin-top: 0rem;
+ }
+
+ #advantages_cards {
+   display: grid;
+   /* padding-left: 14rem; */
+   margin-top: 0rem;
+   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   /* grid-template-rows: 36rem; */
+   grid-gap: 1.5rem;
+   min-height: 20vw;
+
+ }
+
+ .advantages_card {
+   /* border:1px solid; */
+   height: 55vh;
+   box-shadow: var(--color-dark) 0px 7px 29px 0px;
+ }
+
+ /* Product */
+
+ #product {
+   padding-top: 4rem;
+   background: url("first_img.jpg");
+   /* filter: blur(16px); */
+   z-index: 0;
+ }
+
+
+ #product h2 {
+   display: flex;
+   /* padding: 1rem; */
+   margin: 0rem;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   font-size: var(--third-font);
+ }
+
+
+
+ .product_with_all_elements {
+   display: flex;
+   min-height: 80vh;
+   padding: 5rem;
+   padding-top: 0rem;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   background-color: var(--color-primary1);
+   z-index: 3;
+   object-fit: cover;
+ }
+
+ /* Highlight */
+ .highlight {
+   padding: 5rem;
+   min-height: 40vw;
+   align-items: center;
+ }
+
+
+ .highlight_container {
+   margin-top: 10rem;
+ }
+
+ .highlight h2 {
+   display: flex;
+   /* padding: 1rem; */
+   margin: 0rem;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   font-size: var(--third-font);
+   text-align: center;
+   padding: 1rem;
+   color: var(--color-white);
+ }
+
+ .highlight_small_cards {
+   display: flex;
+   flex-direction: row;
+   margin: 0rem;
+   align-items: center;
+   justify-content: space-around;
+   padding: 5rem;
+ }
+
+ .Small_card_container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   ;
+ }
+
+ .Small_card {
+   width: 20rem;
+   height: 10rem;
+   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+   margin-left: 2rem;
+   margin-bottom: 2rem;
+ }
+
+ .Small_card h3 {
+   padding-top: 2rem;
+   text-align: center;
+   font-size: var(--fourth-font);
+   color: var(--color-white);
+ }
+
+ /* .Small_card p {
+   text-align: center;
+ } */
+
+ .button_container {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+
+
+ /* Team */
+ #team {
+   min-height: 80vw;
+   /* background-color: var(--color-light); */
+   padding: 5rem;
+
+   padding-top: 4rem;
+   /* background-image: url("first_img.jpg"); */
+
+ }
+
+ #team h2 {
+   display: flex;
+   margin: 0rem;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   font-size: var(--third-font);
+   text-align: center;
+   color: var(--color-white);
+ }
+
+ .team_container {
+   display: flex;
+   min-height: 60vh;
+   padding: 0rem;
+   padding-top: 0rem;
+   padding-bottom: 0rem;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   background-color: var(--color-black);
+ }
+
+ .team_text {
+   margin: 2rem;
+   color: var(--color-white);
+ }
+
+ .team_container h3 {
+   font-size: var(--fourth-font);
+   color: var(--color-white);
+ }
+
+ .team_container ul {
+   padding: 0rem;
+ }
+
+ .team_container ul li {
+   list-style-type: none;
+   font-family: AktivGrotesk;
+   padding-top: 0.7rem;
+ }
+
+
+
+ .contact_cras_container {
+   display: inline-block;
+   height: 2rem;
+   padding: 0.2rem 0.6rem 0rem 1rem;
+   border: none;
+   font-size: 1rem;
+   text-align: center;
+   text-decoration: none;
+   background-color: var(--color-darker);
+   color: var(--color-lighter);
+   font-family: AktivGrotesk;
+ }
+
+ /* Contact */
+ #contact {
+   display: flex;
+   flex-direction: column;
+   min-height: 80vh;
+   padding-left: 2rem;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .contact_text {
+   width: 35%;
+   padding-bottom: 4rem;
+ }
+
+ #contact h2 {
+   font-size: var(--third-font);
+   margin: 0px 0px 1.5rem 0px;
+   color: var(--color-white);
+
+ }
+
+ #contact p {
+   font-size: var(--secondary-font);
+   color: var(--color-white);
+ }
+
+ /* .contact_form_container {
+   width: 45%;
+   height: 25vw;
+   text-align: left;
+ } */
+
+
+ #contact_form {
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   gap: 1px;
+   /* grid-auto-rows: minmax(100px, auto); */
+ }
+
+
+ #one {
+   grid-column: 1 / 2;
+   grid-row: 1;
+   /* color: var(--color-black); */
+ }
+
+ #two {
+   grid-column: 3 / 4;
+   grid-row: 1;
+ }
+
+ #three {
+   grid-column: 1 / 4;
+   grid-row: 2;
+ }
+
+ #name {
+   width: 100%;
+   height: 10px;
+   color: var(--color-black);
+ }
+
+ #email {
+   width: 100%;
+   height: 30px;
+ }
+
+ #message {
+   width: 100%;
+   height: 80px;
+ }
+
+
+ /* class="form_group"  */
+
+ /* Footer */
+ footer {
+   display: flex;
+   padding: 5vh 2rem;
+   align-items: top;
+   flex-wrap: wrap;
+   gap: 1rem;
+   justify-content: space-between;
+   background-color: var(--color-black);
+   color: var(--color-white);
+ }
+
+ .logo_footer {
+   width: 200px;
+ }
+
+ footer a {
+  color: var(--color-white);
+   text-decoration: none;
+ }
+
+ footer h2 {
+  color: var(--color-white);
+ }
+
+
+ footer h3 {
+  color: var(--color-white);
+ }
+
+ footer ul {
+   margin-top: 0.5rem;
+   margin-left:0rem;
+ }
+
+ footer ul li {
+   margin: 0.4rem;
+   margin-left: 0rem;
+   list-style-type: none;
+ }
+
+ .logo_footer {
+   width: 150px;
+ }
+
+ footer section {
+   display: flex;
+   max-width: 50vw;
+   align-items: top;
+   flex-wrap: wrap;
+   justify-content: space-between;
+ }
+
+ footer section div {
+   margin: 0px 1rem 1rem 0rem;
+ }
+
+ @media screen and (max-width: 795px) {
+
+   .header_text_main h1 {
+     padding: 0rem;
+     margin: 0rem;
+     text-align: center;
+     color: var(--color-white);
+     font-family: GT-Super-Display_Regular;
+   }
+
+   header {
+     padding: 0rem
+   }
+
+   #advantages {
+     padding: 4rem
+   }
+
+   #team_container_v2 {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+     grid-auto-rows: minmax(100px, auto);
+     text-align: center;
+   }
+
+   .team_graphics img {
+     width: 23rem;
+   }
+
+   #text_v2 {
+     grid-column: 1 / 4;
+     grid-row: 2;
+     text-align: left;
+   }
+
+   #team_graphics_v2 {
+     grid-column: 1 / 4;
+     grid-row: 1;
+   }
+
+   .contact_text {
+     width: 80%;
+   }
+
+   #logo_black {
+    position: absolute;
+    top: 0rem;
+    left:3rem;
+   }
+ }
+

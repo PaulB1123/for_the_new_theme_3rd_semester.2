@@ -1,0 +1,384 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+
+@font-face {
+  font-family: AktivGrotesk;
+  src: url(fonts/AktivGrotesk-Regular.ttf);
+}
+
+@font-face {
+  font-family: GT-Super-Display;
+  src: url(fonts/GT-Super-Display-Regular-Trial.otf);
+}
+
+html {
+  font-size: 20px;
+}
+
+/* Color Properties */
+:root {
+  --color-darker: rgb(48, 48, 48);
+  --color-dark: rgb(64, 64, 64);
+  --color-light: rgb(194, 194, 194);
+  --color-lighter: rgb(255, 255, 255);
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+}
+
+/* Fonts */
+h1, h2, h3 {
+  color: var(--color-darker);
+}
+
+h1 {
+  font-family: GT-Super-Display;
+}
+
+h2 {
+  font-family: GT-Super-Display;
+}
+
+h3 {
+  font-family: GT-Super-Display;
+}
+
+p{
+  color: var(--color-dark);
+  font-family: AktivGrotesk;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 0rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+button:hover {
+
+  background-color: black;
+  color: white;
+}
+
+.light_button {
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+  font-size: 0.8rem;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* Menu */
+nav{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-darker);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-dark);
+}
+
+.header_text {
+  width: 40vw;
+  min-width: 30ch;
+}
+
+.header_text h1 {
+  color: var(--color-lighter);
+  font-size: clamp(1.69rem, calc(1.16rem + 2.66vw), 3.05rem);
+  margin-bottom: 1.5rem;
+}
+
+.header_text p {
+  color: var(--color-light);
+  font-size: clamp(0.75rem, calc(0.64rem + 0.55vw), 1.03rem);
+  line-height: 1.65;
+}
+
+.header_graphics {
+  width: 30vw;
+  height: 30vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: var(--color-darker);
+}
+
+/* Sections */
+#intro {
+  display: flex;
+  min-height: 80vh;
+  padding: 0px 15rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+}
+
+.intro_text {
+  width: 40vw;
+  min-width: 450px;
+}
+
+.intro_text h2 {
+  font-size: clamp(0.94rem, calc(0.69rem + 1.22vw), 1.56rem);
+}
+
+.intro_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: var(--color-dark);
+}
+
+.user_email {
+  display: flex;
+  width: 30vw ;
+}
+
+/* .user_email button {
+ font-size: clamp(0.50rem, calc(0.30rem + 0.98vw), 1.00rem);
+} */
+
+#cards {
+  min-height: 80vh;
+  padding: 5rem 2rem;
+}
+
+#card_container {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: 23rem;
+  grid-gap: 1.5rem;
+  /* justify-items: center; */
+}
+
+#info {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light);
+}
+
+.info_text {
+  width: 50vw;
+  min-width: 300px;
+}
+
+.info_text h2 {
+  font-size: clamp(1.69rem, calc(1.16rem + 2.66vw), 3.05rem);
+  margin: 0px 0px 1.5rem 0px;
+} 
+
+.info_text p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0px 0px 1rem 0px;
+}
+
+#contact {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact h2 {
+  font-size: 1.953rem;
+  margin: 0px 0px 1.5rem 0px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+footer a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+footer ul {
+  margin-top: 0.5rem;
+} 
+
+footer ul li {
+  margin: 0.4rem;
+  margin-left: 0rem;
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 0rem;
+}
+
+h3 {
+  color: var(--color-lighter);
+}
+
+#h2_footer {
+  color: var(--color-lighter);
+}
+
+/* .card{
+ min-width: 400px;
+ width: 5vw;
+ background-color: brown;
+} */
+
+.card {
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  transform: scale(1.1);
+  transition: 300ms linear; 
+}
+
+.img_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_image {
+  margin-top: 1rem;
+  border-radius: 10px;
+ 
+}
+
+.card_image img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_name {
+  margin: 0.5rem 0rem 0.5rem 0px;
+  text-align: center;
+  color: black;
+  font-size: clamp(1.25rem, calc(1.08rem + 0.85vw), 1.69rem);
+}
+
+.card_slogan {
+  text-align: center;
+}
+
+.main_mail {
+  margin: 0.5rem 0rem 0.5rem 0px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+
+.card_content {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_buttons {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0.6rem;
+}
+
+.card_button_negative {
+  display: inline-block;
+  height: 1.3rem;
+  padding: 0rem 1rem;
+  border: 1px solid black;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+  cursor: pointer;
+}
+
+.card_button_positive {
+  display: inline-block;
+  height: 1.3rem;
+  padding: 0rem 1rem;
+  border: 1px solid black;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 610px) {
+  .footer_buttons {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 0;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}

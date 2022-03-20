@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Template</title>
+  <!--Template adapted from https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/ -->
+  <!-- Inspired by https://textluke.com/ & https://carrot.tech/ for educational purpose-->
+  <!-- Lorem Ipsum from https://loremizr.monkeymatt.com/ -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <!-- Menu component layout -->
+    <a href="index.html"><img src="logo/logo_white.svg" alt="my_logo" class="logo" id="logo_white"></a>
+    <a href="index.html"><img src="logo/logo_black.svg" alt="my_logo" class="logo" id="logo_black" ></a>
+    <!-- <ul>
+      <li><a href="#advantages">Advantages</a></li>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul> -->
+    <div class="toggle-container">
+      <input type="checkbox" id="switch" name="theme" /><label for="switch" >Toggle</label>
+    </div>
+  </nav>
+
+
+ <div class="header_text_main" id="header_text_main"><h1>Paul</h1>
+  <h1>WebDevelopmentStudent*</h1>
+    <h1>Copenhagen 2022</h1></div>
+
+
+  <header>
+    <!-- Header layout -->
+    <!-- <img id="first_image" src="first_img.jpg" alt="image_with_auto_lenght"> -->
+    <div class="header_text">
+      <h1>I am Paul, web developer with a passion for creating stunning webistes </h1>
+      <p>
+        Hello! This is my portfolio where I will show a couple of projects that I have created in this module for the web development elective 
+      </p>
+  
+    </div>
+    <img id="second_image" src="Photo_Paul_Balta_for_portfolio.jpg" alt="image_with_auto_lenght">
+    <div class="header_graphics"></div>
+  </header>
+
+
+
+
+
+  <section id="advantages">
+    <h2>Projects</h2>
+    <!-- Card layout -->
+    <div id="advantages_cards">
+      
+      <article class="advantages_card">
+        <!-- Add image-->
+        <a  href="/1_Exercise/12c.01.01-fonts-and-cards/index.html"><img src="/img/UI.jpg" alt="image_with_auto_lenght"></a>
+        <div class="advantages_card_graphics"></div>
+        <a  href="/1_Exercise/12c.01.01-fonts-and-cards/index.html"> <div class="advantages_card_text">
+          <h3>Fonts and UI</h3>
+          <p>
+            The purpose of the exercise was to create a mockup landing page design using fonts and gray scales only. First part was to implement a font hierarchy and the second part is to design UI cards
+          </p>
+        </div></a>
+      </article>
+      <article class="advantages_card">
+        <!-- Add image-->
+        <a  href="/2_Exercise/12c.01.02.colors-and-animations/index.html"> <img src="/img/Colors.jpg" alt="image_with_auto_lenght"></a>
+        <div class="advantages_card_graphics"></div>
+        <div class="advantages_card_text">
+          <h3>Colors</h3>
+          <p>
+            The purpose of the exercise was to apply a color pallet to a mockup landing page design
+          </p>
+        </div>
+      </article>
+      <article class="advantages_card">
+        <!-- Add image-->
+        <a  href="/5_Exercise_Responsive_Design/12c.01.04.responsive-design/index.html"> <img src="/img/ResponsiveDesign.jpg" alt="image_with_auto_lenght"></a>
+        <div class="advantages_card_graphics"></div>
+        <div class="advantages_card_text">
+          <h3>Responsive Design</h3>
+          <p>
+            The purpose of the exercise was to apply the CSS Flex and Grid method you have learned to a mockup landing page design to make it a responsive layout. 
+          </p>
+        </div>
+      </article>
+      <article class="advantages_card">
+        <!-- Add image-->
+        <a  href="/6_Exercise_Animation/scrolltrigger_exercise_starter/starter.html"> <img src="/img/Animation.jpg" alt="image_with_auto_lenght"></a>
+        <div class="advantages_card_graphics"></div>
+        <div class="advantages_card_text">
+          <h3>Animation</h3>
+          <p>
+            The purpose of the exercise was to apply a couple of scrolltriggered animations to some projects.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- <section id="product">
+    <h2>What I like to do </h2>
+   
+
+    <div class="product_with_all_elements">
+      <div class="product_graphics">
+        <img src="first_img.jpg" alt="image_with_auto_lenght">
+      </div>
+      <div class="product_text">
+        <article>
+          <h3>1. Nisi Unde fuga mus fuga</h3>
+          <p>
+            Risus ab ducimus quo v terrenos acerba si odit quam justo nunc ullo
+            Modo.
+          </p>
+        </article>
+        <article>
+          <h3>2. Clades mus orci</h3>
+          <p>
+            Diam esse eaque plebeiorum mus urna imbibere conubia cras victoris
+            iusto populo.
+          </p>
+        </article>
+        <article>
+          <h3>3. Terrenos mus eventum</h3>
+          <p>
+            Vero poenis sunt id proin dui hac purus ipsa id qui sed te octavas
+            regnante regnet nisi'e putatur qui eos.
+          </p>
+        </article>
+        <article>
+          <h3>4. Ridiculus nec proin</h3>
+          <p>
+            Nemo curiosus senatus ille decipitur est iure ipsa dis sed nam quod
+            segete eum eius usus dis donec amet.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+
+
+
+  <section class="highlight">
+    <!-- Big headline component -->
+    <div class="highlight_container">
+      <div class="highlight_paragraph">
+        <h2>
+         What I like to do
+        </h2>
+      </div>
+      <!-- Two small cards -->
+      <div class="highlight_small_cards">
+        <div class="Small_card_container">
+          <div class="Small_card">
+            <h3>Animations</h3>
+            <!-- <p>46% scripta orci</p> -->
+          </div>
+          <div class="Small_card">
+            <h3>Design</h3>
+            <!-- <p>45% dextris iure</p> -->
+          </div>
+          <div class="Small_card">
+            <h3>Prototyping</h3>
+            <!-- <p>45% dextris iure</p> -->
+          </div>
+          <div class="Small_card">
+            <h3>Layouting</h3>
+            <!-- <p>45% dextris iure</p> -->
+          </div>
+        </div>
+      </div>
+      <!-- <div class="button_container">
+        <button type="button" id="button_cards">Request Demo &#x2794;</button>
+      </div> -->
+    </div>
+  </section>
+
+
+
+
+  <section id="team">
+    <h2>How I have created the projects</h2>
+    <!-- Components with graphics to one side and text to the other -->
+
+
+    <article class="team_container">
+      <section class="team_graphics"> <img src="/KEA_logo_DK_Web.jpg" alt="image_with_auto_lenght"></section>
+      <section class="team_text">
+        <h3>KEA </h3>
+        <ul>
+          <li>- Working with Type Scale to create a hierarchy with one or two fonts </li>
+          <li>- Creating a color palette</li>
+          <li>- Create a dark theme </li>
+          <li>- Adding animation </li>
+        </ul>
+        <a  href="/5_Exercise_Responsive_Design/12c.01.04.responsive-design/index.html" class="contact_cras_container">See project &#x2794;</a>
+      </section>
+    </article>
+
+
+
+
+    <article class="team_container" id="team_container_v2">
+      <section class="team_text" id="text_v2">
+        <h3>Greensock</h3>
+        <ul>
+          <li>- Use a delay, to make something happen when an object stops and hits the spike</li>
+          <li>- Making an object bounce</li>
+          <li>- Animations to a timeline, so that the object still moves to the right while rotating, and once it hits the spike</li>
+        </ul>
+        <a  href="/6_Exercise_Animation/scrolltrigger_exercise_starter/starter.html"  class="contact_cras_container">See project &#x2794;</a>
+      </section>
+      <section class="team_graphics" id="team_graphics_v2"><img src="/Greensock.svg" alt="image_with_auto_lenght">
+      </section>
+    </article>
+  </section>
+
+
+
+
+  <section id="contact">
+    <div class="contact_text">
+      <h2>Contact</h2>
+      <p>
+        Long story short, I'm currently looking for a new project where I could step in on many different levels : content, social media, digital communication, design, and more!
+      </p>
+      <p>
+        If you would like to get in contact
+      </p>
+    </div>
+    <!-- Contact form section layout -->
+    <div class="contact_form_container">
+      <form id="contact_form">
+        <!-- Two column layout, name and email a column each, message two columns. Labels should be over input-->
+        <div class="form_group" id="one">
+          <!-- <label for="name">Full name</label> -->
+          <input type="text" id="name" placeholder="NAME" name="Name" required class="radient-border" />
+        </div>
+
+        <div class="form_group" id="two">
+          <!-- <label for="email">Email address</label> -->
+          <input type="email" id="email" placeholder="EMAIL ADDRESS" name="Email" required class="radient-border" />
+        </div>
+
+        <div class="form_group" id="three">
+          <!-- <label for="message">Message</label> -->
+          <textarea id="message" placeholder="MESSAGE" name="Message" required></textarea>
+        </div>
+      </form>
+      <div class="form_group">
+        <button type="submit">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <footer>
+    <!-- Footer component -->
+    <div>
+      <h2 ><img src="logo/logo_white.svg" class="logo_footer" id="logo_white_2"></h2>
+      <h2 ><img src="logo/logo_black.svg" class="logo_footer" id="logo_black_2"></h2>
+      <!-- <ul>
+        <li><a>contact@logo.com</a></li>
+        <li><a>+45 23225343</a></li>
+      </ul> -->
+    </div>
+    <section>
+      <!-- <div>
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="">Stricte Natione</a></li>
+          <li><a href="">Pygmaeus Quasi</a></li>
+          <li><a href="">Patiens Quos Neglexi</a></li>
+        </ul>
+      </div> -->
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

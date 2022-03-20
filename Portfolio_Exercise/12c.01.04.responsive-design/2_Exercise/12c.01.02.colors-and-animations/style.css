@@ -1,0 +1,374 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+/* Fonts */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+/* :root {
+  --color-primary1: #F2A23F;
+  --color-primary2: #BF7D43;
+  --color-secondary1: #594859;
+  --color-secondary2: #403559;
+  --color-accent1: #8C6253;
+  --color-accent2: #593F59;
+  --color-white: white;
+}
+
+
+.dark-mode:root {
+  --color-primary1: #222222;
+  --color-primary2: #888888;
+  --color-secondary1: #999999;
+  --color-secondary2: #555555;
+  --color-accent1: #222222;
+  --color-accent2: #111111;
+  --color-white: white;
+} */
+
+
+html {
+  --color-primary1: #F2A23F;
+  --color-primary2: #BF7D43;
+  --color-secondary1: #594859;
+  --color-secondary2: #403559;
+  --color-accent1: #8C6253;
+  --color-accent2: #593F59;
+  --color-white: white;
+}
+
+html[data-theme='dark'] {
+  --color-primary1: #222222;
+  --color-primary2: #888888;
+  --color-secondary1: #999999;
+  --color-secondary2: #555555;
+  --color-accent1: #222222;
+  --color-accent2: #111111;
+  --color-white: white;
+  --color-black: black;
+}
+
+
+input[type=checkbox] { /* styling for input element */
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label { /* styling for labels */
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: var(--color-primary1);
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+/* Check box */
+
+label:after { /* styling for labels - on toggle */
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-secondary2);
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label { /* conditional check while toggling */
+  background: var(--color-black);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+
+
+h1,
+h2,
+h3 {
+  color: #111;
+  font-family: "Noto Serif Display", serif;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+  color: var(--color-secondary2);
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  color: var(--color-accent2);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-secondary1);
+  color:  var(--color-primary1); 
+}
+
+.dark_button {
+  background-color: var(--color-secondary2);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #eee;
+  border-color: #ddd;
+  color: var(--color-secondary2);
+}
+
+/* Menu */
+nav{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary2);
+}
+
+nav a {
+  color: var(--color-primary1);
+  text-decoration: none;
+}
+
+nav a.logo {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.25rem;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-primary1);
+}
+
+header h1 {
+  color: var(--color-secondary2);
+}
+
+header p {
+  color: var(--color-secondary1);
+}
+
+header button {
+  margin-bottom: 5rem;
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  width: 30vw;
+  height: 30vw;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 300px;
+  background-color: var(--color-primary2);
+}
+
+/* product section */
+#product {
+  padding: 2rem;
+  background-color: var(--color-primary1);
+}
+
+#product h3 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+  color: var(--color-secondary1)
+}
+
+#product article {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.product_text {
+  width: 50vw;
+  min-width: 300px;
+  color:var(--color-white)
+}
+
+.product_text p {
+  color:var(--color-accent1)
+}
+
+.product_text a {
+  color:var(--color-secondary2)
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  margin: 3rem;
+  background-color:  var(--color-primary2);
+  border-radius: 300px;
+}
+
+/* highlight sections */
+.highlight {
+  display: flex;
+  min-height: 70vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.highlight div {
+  width: 80vw;
+  color: var(--color-accent2)
+}
+
+.highlight div h2 {
+  font-size: 3.052rem;
+  line-height: 4rem;
+  color: var(--color-primary1);
+}
+
+.highlight div a {
+  color: var(--color-primary2)
+}
+
+.dark {
+  background-color:var(--color-accent2);
+}
+
+.dark h2 {
+  color:  var(--color-primary1);
+}
+
+.dark a {
+  color: var(--color-primary1);
+} 
+
+/* request section */
+#request {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-primary2);
+}
+
+#request div {
+  width: 50vw;
+  min-width: 450px;
+  color: var(--color-primary1)
+}
+
+/* #request div p {
+  color: var(--color-white)
+} */
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-secondary2);
+  color: #ddd;
+}
+
+footer h2, footer h3 {
+  color: #eee;
+}
+
+footer a {
+  color: var( --color-primary1);
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
